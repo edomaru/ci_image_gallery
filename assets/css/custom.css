@@ -1,3 +1,6 @@
+body { padding-top: 70px; }
+
+
 .thumbnail-caption {			
 	text-align: center;
 	margin: 4px -4px -4px;			
@@ -20,4 +23,20 @@
 .thumbnail-caption a {
 	text-decoration: none;
 	color: #5d5d5d;			
+}
+
+footer {
+    background: #fff;
+    padding: 5px 20px 0;
+    
+    position: relative;
+    
+    width: 100%;  
+    height: 30px;
+    border-top: 1px solid #e6e9ed;  
+}
+
+footer p {
+	font-size: 85%;
+	color: #777;
 }

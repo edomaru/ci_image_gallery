@@ -1,17 +1,3 @@
-<?php
-function getContrastYIQ($hexcolor){
-	$r = hexdec(substr($hexcolor,0,2));
-	$g = hexdec(substr($hexcolor,2,2));
-	$b = hexdec(substr($hexcolor,4,2));
-	$yiq = (($r*299)+($g*587)+($b*114))/1000;
-	return ($yiq >= 128) ? '000000' : 'ffffff';	
-}
-
-function getColor() {
-	return dechex(mt_rand(0, 0xFFFFFF));	
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,56 +8,7 @@ function getColor() {
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">    
-	<style>
-		body { padding-top: 70px; }
-
-		footer {
-		    background: #fff;
-		    padding: 5px 20px 0;
-		    
-		    position: relative;
-		    
-		    width: 100%;  
-		    height: 30px;
-		    border-top: 1px solid #e6e9ed;  
-		}
-
-		footer p {
-			font-size: 85%;
-			color: #777;
-		}
-
-		.thumbnail-caption {			
-			text-align: center;
-			margin: 4px -4px -4px;			
-			min-height: 50px;
-
-			background-color: #f5f5f5;
-		    border-bottom-left-radius: 3px;
-		    border-bottom-right-radius: 3px;
-		    border-top: 1px solid #ddd;
-		    padding: 4px 10px;		    
-		}
-
-		.thumbnail-caption h4 {
-			font-size: 12px;						
-			text-transform: uppercase;
-			font-weight: bold;
-			letter-spacing: 1px;
-		}
-		
-		.thumbnail-caption a {
-			text-decoration: none;
-			color: #5d5d5d;			
-		}	
-
-
-		.panel-heading {
-			font-weight: bolder;
-			text-align: center;
-			font-size: 18px;
-		}	
-	</style>
+	<link rel="stylesheet" href="assets/css/custom.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -89,17 +26,9 @@ function getColor() {
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 		      	</button>
-		      	<a class="navbar-brand" href="#">Cimage Gallery</a>
+		      	<a class="navbar-brand" href="#">CI Image Gallery</a>
   			</div>  
-	      	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  		<form class="navbar-form navbar-right" role="search">
-			        <div class="input-group">
-				      	<input type="text" class="form-control" placeholder="Search...">
-				      	<div class="input-group-btn">
-				      		<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-				      	</div>
-				    </div>
-		      	</form>
+	      	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		  		
 		      	<ul class="nav navbar-nav navbar-right">
 			        <li><a href="#">Latest Update</a></li>
 			        <li><a href="#">Popular</a></li>			        
@@ -110,23 +39,23 @@ function getColor() {
   	</nav>
     <div class="container">   
     	<div class="page-header">
-    		<h1>Lorem ipsum dolor color</h1>
+    		<h1>Image 1</h1>
     	</div>
 
     	<div class="row">
     		<div class="col-md-8 col-xs-12">
     			<div class="thumbnail">
-			      <img src="http://placehold.it/768x400&text=Image-1" alt="...">			      
+			      <img src="assets/uploads/Image+1.jpg" alt="Image 1">			      
 			    </div>
 			    <div class="row">
 			    	<div class="col-md-3">
 			    		<div class="thumbnail">
-					      <img src="http://placehold.it/200x130&text=Image-2" alt="...">			      
+					      <img src="assets/uploads/Image+2.jpg" alt="Image 2">			      
 					    </div>
 			    	</div>
 			    	<div class="col-md-3 col-md-offset-6">
 			    		<div class="thumbnail">
-					      <img src="http://placehold.it/200x130&text=Image-3" alt="...">			      
+					      <img src="assets/uploads/Image+3.jpg" alt="Image 3">			      
 					    </div>
 			    	</div>
 			    </div>
@@ -141,23 +70,7 @@ function getColor() {
 				  </li>
 				</ul>
 
-				<div class="panel panel-default">
-					<div class="panel-heading">Download</div>
-					<div class="panel-body">
-						<a href='#' class="btn btn-lg btn-block btn-default">					
-							1336x768
-						</a>
-						<a href='#' class="btn btn-lg btn-block btn-default">					
-							1440x900
-						</a>
-						<a href='#' class="btn btn-lg btn-block btn-default">					
-							1280x800
-						</a>
-						<a href='#' class="btn btn-lg btn-block btn-default">					
-							2880x1800
-						</a>
-					</div>
-				</div>
+				<a href='#' class="btn btn-lg btn-block btn-primary">Download</a>
     		</div>
     	</div>
 
