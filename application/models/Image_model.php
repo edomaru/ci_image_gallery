@@ -42,4 +42,11 @@ class Image_model extends CI_Model {
 		return $this->db->query("SELECT * FROM `images` where id != ? order by rand() limit ?", array($except, $limit));		
 	}
 
+	public function view_count($id)
+	{
+		$this->db->set("view_count", "view_count+1", false);
+		$this->db->where("id", $id);
+		$this->db->update($this->table);
+	}
+
 }

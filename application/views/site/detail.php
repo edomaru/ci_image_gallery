@@ -27,7 +27,7 @@
 	<div class="col-md-4 col-xs-12">
 		<ul class="list-group">
 		  <li class="list-group-item">
-		    <i class="glyphicon glyphicon-eye-open"></i> 120 View
+		    <i class="glyphicon glyphicon-eye-open"></i> <?php echo $row->view_count + 1 ?> View
 		  </li>
 		  <li class="list-group-item">
 		    <i class="glyphicon glyphicon-download"></i> 100 Download
