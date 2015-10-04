@@ -23,4 +23,11 @@ class Image_model extends CI_Model {
 		return $this;
 	}
 
+	public function popular()
+	{
+		$this->db->order_by("download_count", "desc");
+
+		return $this;
+	}
+
 }
