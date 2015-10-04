@@ -16,4 +16,11 @@ class Image_model extends CI_Model {
 		return $this->db->count_all_results($this->table);
 	}
 
+	public function latest()
+	{
+		$this->db->order_by("created_at", "desc");
+		
+		return $this;
+	}
+
 }
