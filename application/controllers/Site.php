@@ -2,9 +2,21 @@
 
 class Site extends CI_Controller {
 
+	private $limit = 8;
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('image_model', 'image');
+	}
+
 	public function index()
 	{
-		$this->load->view("site/index");
+		$query      = $this->image->all($this->limit);
+		$total_rows = $this->image->count();
+		$links      = pagination($total_rows, $this->limit);
+
+		$this->load->view("site/index", compact('query', 'total_rows', 'links'));
 	}
 
 	public function latest()
