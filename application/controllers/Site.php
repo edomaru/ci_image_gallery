@@ -27,4 +27,21 @@ class Site extends CI_Controller {
 		
 	}
 
+	public function generate()
+	{
+		for ($i = 1; $i <= 8; $i++)
+		{
+			$title = "Image " . $i;
+
+			$this->db->insert("images", array(
+				'title' => $title,
+				'filename' => urlencode($title) . ".jpg",
+				'created_at' => date('Y-m-d H:i:s'),
+				'visible' => 1				
+			));
+
+			echo $this->db->last_query() . "<br />";
+		}
+	}
+
 }
