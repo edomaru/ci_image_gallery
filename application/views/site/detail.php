@@ -1,13 +1,13 @@
 <?php $this->view("header"); ?>
 
 <div class="page-header">
-	<h1>Image 1</h1>
+	<h1><?php echo $row->title; ?></h1>
 </div>
 
 <div class="row">
 	<div class="col-md-8 col-xs-12">
 		<div class="thumbnail">
-	      <img src="<?php echo base_url(); ?>assets/uploads/Image+1.jpg" alt="Image 1">			      
+	      <img src="<?php echo base_url(); ?>assets/uploads/<?php echo $row->filename; ?>" alt="<?php echo $row->title; ?>">			      
 	    </div>
 	    <div class="row">
 	    	<div class="col-md-3">

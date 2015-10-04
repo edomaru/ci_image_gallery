@@ -30,4 +30,11 @@ class Image_model extends CI_Model {
 		return $this;
 	}
 
+	public function find($id)
+	{
+		$this->db->where("id", $id);
+		$query = $this->db->get($this->table);
+		return $query->num_rows() ? $query->row() : null;
+	}
+
 }

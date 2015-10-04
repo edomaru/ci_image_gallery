@@ -39,7 +39,12 @@ class Site extends CI_Controller {
 
 	public function detail($id)
 	{
-		$this->load->view("site/detail");	
+		$row = $this->image->find($id);
+		if (empty($row)) {
+			show_404();
+		}
+
+		$this->load->view("site/detail", compact('row'));	
 	}
 
 	public function download()
