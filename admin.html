@@ -39,8 +39,13 @@
   		</div>
   	</nav>
     <div class="container">   
-    	<div class="page-header">
-    		<h1>Image List</h1>
+    	<div class="page-header clearfix">
+    		<div class="pull-left">
+    			<h1>List Image</h1>
+    		</div>
+    		<div class="pull-right" style="line-height:70px;">
+    			<a href="admin-form.html" class="btn btn-primary">Add New</a>
+    		</div>
     	</div>
 
     	<div class="row">
@@ -49,19 +54,15 @@
 					<thead>
 						<tr>
 							<th width="10">No</th>
-							<th width="120">Action</th>
 							<th width="200">Thumbnail</th>
 							<th>Title</th>
 							<th width="50">Visibility</th>
+							<th width="120">Action</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>1</td>
-							<td>
-								<a href="admin-form.html" class="btn btn-xs btn-default">Edit</a>
-								<a onclick="javascript:confirm('Are you sure ?')" class="btn btn-xs btn-danger">Delete</a>
-							</td>
 							<td>
 								<div class="thumbnail">
 									<img width="200" src="assets/uploads/Image+1.jpg" alt="Image 1">
@@ -71,13 +72,13 @@
 							<td>
 								<span class="label label-success">Visible</span>
 							</td>
-						</tr>
-						<tr>
-							<td>2</td>
 							<td>
 								<a href="admin-form.html" class="btn btn-xs btn-default">Edit</a>
 								<a onclick="javascript:confirm('Are you sure ?')" class="btn btn-xs btn-danger">Delete</a>
 							</td>
+						</tr>
+						<tr>
+							<td>2</td>
 							<td>
 								<div class="thumbnail">
 									<img width="200" src="assets/uploads/Image+2.jpg" alt="Image 2">
@@ -87,13 +88,13 @@
 							<td>
 								<span class="label label-default">Invisible</span>
 							</td>
-						</tr>
-						<tr>
-							<td>3</td>
 							<td>
 								<a href="admin-form.html" class="btn btn-xs btn-default">Edit</a>
 								<a onclick="javascript:confirm('Are you sure ?')" class="btn btn-xs btn-danger">Delete</a>
 							</td>
+						</tr>
+						<tr>
+							<td>3</td>
 							<td>
 								<div class="thumbnail">
 									<img width="200" src="assets/uploads/Image+3.jpg" alt="Image 3">
@@ -102,6 +103,10 @@
 							<td>Image 3</td>
 							<td>
 								<span class="label label-default">Invisible</span>
+							</td>
+							<td>
+								<a href="admin-form.html" class="btn btn-xs btn-default">Edit</a>
+								<a onclick="javascript:confirm('Are you sure ?')" class="btn btn-xs btn-danger">Delete</a>
 							</td>
 						</tr>
 					</tbody>
