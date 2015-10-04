@@ -30,11 +30,14 @@
 		    <i class="glyphicon glyphicon-eye-open"></i> <?php echo $row->view_count + 1 ?> View
 		  </li>
 		  <li class="list-group-item">
-		    <i class="glyphicon glyphicon-download"></i> 100 Download
+		    <i class="glyphicon glyphicon-download"></i> <?php echo $row->download_count ?> Download
 		  </li>
 		</ul>
-
-		<a href='#' class="btn btn-lg btn-block btn-primary">Download</a>
+		
+		<?php echo form_open("site/download"); ?>
+			<input type="hidden" name="image_id" value="<?php echo $row->id; ?>">
+			<button type="submit" class="btn btn-lg btn-block btn-primary">Download</button>
+		<?php echo form_close(); ?>
 	</div>
 </div>
 

@@ -55,7 +55,13 @@ class Site extends CI_Controller {
 
 	public function download()
 	{
-		
+		if ( ! empty($_POST['image_id']) ) 
+		{			
+			$id  = $this->input->post('image_id');
+			$row = $this->image->find($id);			
+			$this->load->helper('download');
+			force_download("./assets/uploads/" . $row->filename, NULL);
+		}		
 	}
 
 	public function generate()
