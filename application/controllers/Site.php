@@ -59,8 +59,9 @@ class Site extends CI_Controller {
 		{			
 			$id  = $this->input->post('image_id');
 			$row = $this->image->find($id);			
+			$this->image->download_count($id);
 			$this->load->helper('download');
-			force_download("./assets/uploads/" . $row->filename, NULL);
+			force_download("./assets/uploads/" . $row->filename, NULL);			
 		}		
 	}
 

@@ -49,4 +49,11 @@ class Image_model extends CI_Model {
 		$this->db->update($this->table);
 	}
 
+	public function download_count($id)
+	{
+		$this->db->set("download_count", "download_count+1", false);
+		$this->db->where("id", $id);
+		$this->db->update($this->table);
+	}
+
 }
