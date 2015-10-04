@@ -37,4 +37,9 @@ class Image_model extends CI_Model {
 		return $query->num_rows() ? $query->row() : null;
 	}
 
+	public function random_images($except, $limit = 2)
+	{
+		return $this->db->query("SELECT * FROM `images` where id != ? order by rand() limit ?", array($except, $limit));		
+	}
+
 }

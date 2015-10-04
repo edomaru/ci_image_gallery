@@ -12,12 +12,14 @@
 	    <div class="row">
 	    	<div class="col-md-3">
 	    		<div class="thumbnail">
-			      <a href="detail.html"><img src="<?php echo base_url(); ?>assets/uploads/Image+2.jpg" alt="Image 2"></a>
+	    			<?php $thumbnail = $left_image->thumbnail ? $left_image->thumbnail : $left_image->filename ?>
+			      <a href="<?php echo site_url("site/detail/" . $left_image->id) ?>"><img src="<?php echo base_url(); ?>assets/uploads/<?php echo $thumbnail; ?>" alt="Image 2"></a>
 			    </div>
 	    	</div>
 	    	<div class="col-md-3 col-md-offset-6">
 	    		<div class="thumbnail">
-			      <a href="detail.html"><img src="<?php echo base_url(); ?>assets/uploads/Image+3.jpg" alt="Image 3"></a>
+			      <?php $thumbnail = $right_image->thumbnail ? $right_image->thumbnail : $right_image->filename ?>
+			      <a href="<?php echo site_url("site/detail/" . $right_image->id) ?>"><img src="<?php echo base_url(); ?>assets/uploads/<?php echo $thumbnail; ?>" alt="Image 2"></a>
 			    </div>
 	    	</div>
 	    </div>

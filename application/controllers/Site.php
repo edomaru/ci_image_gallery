@@ -44,7 +44,11 @@ class Site extends CI_Controller {
 			show_404();
 		}
 
-		$this->load->view("site/detail", compact('row'));	
+		$random_images = $this->image->random_images($row->id);
+		$left_image = $random_images->first_row();
+		$right_image = $random_images->last_row();
+
+		$this->load->view("site/detail", compact('row', 'left_image', 'right_image'));	
 	}
 
 	public function download()
