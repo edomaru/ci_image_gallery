@@ -13,8 +13,8 @@ class Site extends CI_Controller {
 
 	public function index()
 	{
-		$query      = $this->image->all($this->limit);
-		$total_rows = $this->image->count();		
+		$query      = $this->image->visible()->all($this->limit);
+		$total_rows = $this->image->visible()->count();		
 		$links      = pagination($total_rows, $this->limit);
 
 		$this->load->view("site/index", compact('query', 'total_rows', 'links'));
@@ -22,8 +22,8 @@ class Site extends CI_Controller {
 
 	public function latest()
 	{
-		$query      = $this->image->latest()->all($this->limit);
-		$total_rows = $this->image->count();		
+		$query      = $this->image->latest()->visible()->all($this->limit);
+		$total_rows = $this->image->visible()->count();		
 		$links      = pagination($total_rows, $this->limit);
 
 		$this->load->view("site/index", compact('query', 'total_rows', 'links'));
@@ -31,8 +31,8 @@ class Site extends CI_Controller {
 
 	public function popular()
 	{
-		$query      = $this->image->popular()->all($this->limit);
-		$total_rows = $this->image->count();		
+		$query      = $this->image->popular()->visible()->all($this->limit);
+		$total_rows = $this->image->visible()->count();		
 		$links      = pagination($total_rows, $this->limit);
 
 		$this->load->view("site/index", compact('query', 'total_rows', 'links'));
